@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller fullScreen="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchGame" customModuleProvider="target">
+                    <items>
+                        <spriteKitScene alignment="left" id="eh2-bW-rMT">
+                            <gestureRecognizers>
+                                <swipeGestureRecognizer id="WMw-ef-LgY">
+                                    <connections>
+                                        <action selector="handleSwipeRightWithSwipeGesture:" destination="AgC-eL-Hgc" id="7Ra-AK-Xat"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                                <swipeGestureRecognizer direction="2" id="0gC-32-GjG">
+                                    <connections>
+                                        <action selector="handleSwipeLeftWithSwipeGesture:" destination="AgC-eL-Hgc" id="JI9-zn-RBx"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                            </gestureRecognizers>
+                        </spriteKitScene>
+                    </items>
+                    <connections>
+                        <outlet property="skInterface" destination="eh2-bW-rMT" id="Wme-JX-I9n"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="200" y="349.5"/>
+        </scene>
+    </scenes>
+</document>
